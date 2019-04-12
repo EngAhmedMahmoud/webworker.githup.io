@@ -1,4 +1,5 @@
-"use strict";
-if ("serviceWorker" in navigator) {
-    console.log("service worker is supported");
-}
+"use strict"
+//install the service worker
+self.addEventListener("install", (e) => {
+    console.log("Service worker is installed successfully")
+})
