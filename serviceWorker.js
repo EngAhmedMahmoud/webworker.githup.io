@@ -45,3 +45,8 @@ self.addEventListener("activate", (e) => {
 
     )
 });
+//get the response from cache when website if offline
+self.addEventListener("fetch", (e) => {
+    console.log("Fetching files from cache");
+    e.respondWith(fetch(e.request).catch(() => caches.match(e.request)));
+})
